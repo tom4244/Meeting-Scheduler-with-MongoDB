@@ -1,0 +1,414 @@
+@use "fonts";
+$AspectRatio: 0.75;
+$huge: 10000px;
+$desktop: 1280px;
+$tablet: 1024px; 
+$phablet: 767px;
+$phone: 360px; 
+$tiny: 330px;
+
+$pencilImg: "../../img/pencil.png";
+$lineImg: "../../img/5pix.png";
+$ellipseImg: "../../img/ellipse.png";
+$rectangleImg: "../../img/rectangle.png";
+$eraserImg: "../../img/eraser.png";
+$px1Img: "../../img/1pix.png";
+$px3Img: "../../img/3pix.png";
+$px5Img: "../../img/5pix.png";
+$px10Img: "../../img/10pix.png";
+$px15Img: "../../img/15pix.png";
+$px20Img: "../../img/20pix.png";
+
+.alignedBar {
+  display: flex;
+  flex-direction: row;
+	flex-wrap: wrap;
+	margin-top: 2px;
+}
+
+.button8 {
+  @extend .rectangularButton;
+  font-size: 8px !important;	
+}
+
+.button12 {
+  @extend .rectangularButton;
+  font-size: 12px !important;	
+}
+
+.button18 {
+  @extend .rectangularButton;
+  font-size: 18px !important;	
+}
+
+.button24 {
+  @extend .rectangularButton;
+  font-size: 24px !important;	
+}
+
+.button30 {
+  @extend .rectangularButton;
+  font-size: 30px !important;	
+}
+
+.button36 {
+  @extend .rectangularButton;
+  font-size: 36px !important;	
+}
+
+.buttonIcon {
+  width: 40px;
+  height: 30px;
+  border: 1px solid blue;
+	border-radius: 5px;
+  padding: 0;
+	cursor: pointer;
+  display: flex;
+  flex: row;
+  justify-content: center;
+  &:hover {
+    background-color: palegreen;
+    border: 1px solid green;
+  }
+  &:active {
+    background-color: lime; 
+	}
+}
+
+.buttonPencil {
+	@extend .buttonIcon;
+	background: url($pencilImg) no-repeat;
+	background-color: dodgerblue;
+}
+
+.buttonLine{
+	@extend .buttonIcon;
+	background: url($lineImg) no-repeat;
+	background-color: dodgerblue;
+}
+
+.buttonEllipse{
+	@extend .buttonIcon;
+	background: url($ellipseImg) no-repeat;
+	background-color: dodgerblue;
+}
+
+.buttonRectangle {
+	@extend .buttonIcon;
+	background: url($rectangleImg) no-repeat;
+	background-color: dodgerblue;
+}
+
+.buttonEraser {
+	@extend .buttonIcon;
+	background: url($eraserImg) no-repeat;
+	background-color: dodgerblue;
+}
+
+.button1px {
+	@extend .buttonIcon;
+	background: url($px1Img) no-repeat;
+	background-color: dodgerblue;
+}
+
+.button3px {
+	@extend .buttonIcon;
+	background: url($px3Img) no-repeat;
+	background-color: dodgerblue;
+}
+
+.button5px {
+	@extend .buttonIcon;
+	background: url($px5Img) no-repeat;
+	background-color: dodgerblue;
+}
+
+.button10px {
+	@extend .buttonIcon;
+	background: url($px10Img) no-repeat;
+	background-color: dodgerblue;
+}
+
+.button15px {
+	@extend .buttonIcon;
+	background: url($px15Img) no-repeat;
+	background-color: dodgerblue;
+}
+
+.button20px {
+	@extend .buttonIcon;
+	background: url($px20Img) no-repeat;
+	background-color: dodgerblue;
+}
+
+.buttonText {
+  margin-top: 10px;
+}
+
+.canvasDiv {
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+  margins: 0px;
+}
+
+i {
+	 font-family: "Quicksand";
+   font-size: 18px;   
+	 @media (max-width: $phone) {
+     font-size: 14px;
+	}
+}
+
+[type=checkbox] {
+  width: 24px;
+  height: 24px;
+	background-color: white;
+	margin-left: 10px;
+  transition: background 300ms;
+  cursor: pointer;
+}
+  
+.colorBar {
+  display: flex;
+  flex-direction: row;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	margin-top: 2px;
+}
+
+.colorInput {
+  padding: 0px;
+  width: 50px;
+  height: 30px;
+	margin-left: 10px;
+	margin-right: 10px;
+	borderColor: blue;
+}
+
+.flexRow {
+	display: flex;
+	flex-direction: row;
+}
+
+h3 {
+  font-family: Josefin Slab;                        
+  font-weight: bold;
+  font-size: 20px;
+  color: blue;
+  margin-top: 10px;                                 
+  @media (max-width: $phone) {
+    font-size: 16px; 
+  } 
+}
+
+.inputSlider {
+  background: transparent;
+  width: 300px;
+	-webkit-appearance: none;
+  border-radius: 3px;
+	margin-top: 14px;
+	border: 1px solid #000000;
+
+  [type=range]::-webkit-slider-runnable-track {
+	  border: 1px solid #000000;
+    background: #1339e1;
+    width: 300px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+	}
+  [type=range]::-webkit-slider-thumb {
+	  -webkit-appearance: none;
+	  background: #13a0e1;
+	}
+  [type=range]::-moz-range-track {
+	  background: #1339e1;
+    width: 300px;
+	}
+  [type=range]::-moz-range-thumb {
+	  background: #13a0e1;
+	}
+}
+
+label {
+	font-family: Josefin Slab;
+	font-weight: bold;
+	font-size: 16px;
+	color: blue;
+	margin-top: 10px;
+	@media (max-width: $phone) {
+    font-size: 12px;
+	}
+}
+
+.labelColor {
+	@extend label;
+	margin-top: 0px;
+	font-size: 22px;
+	width: 80px;
+}
+
+.noWrap {
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.page {
+	background-color: aliceblue;
+}
+
+.rangeBar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 500px;
+	margin-right: 10px
+}
+
+.rangeWindow {
+  background-color: white;
+  color: navy;
+  height: 20px;
+  width: 32px;
+  font-size: 18px;
+	font-weight: bold;
+	border: 1px solid blue;
+  border-radius: 3px;
+	margin-left: 14px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.rectangularButton {
+  width: 70px;
+  height: 40px;
+	color: white;
+  background-color: dodgerblue;
+  border: 1px solid blue;
+  border-radius: 5px;
+  text-align: center;
+  font-family: 'Josefin Slab';
+	font-size: 16px;
+  font-weight: bold;
+  padding: 0px;
+  cursor: pointer;
+  &:hover {
+    background-color: palegreen;
+    color: navy;
+    border: 1px solid green;
+  }
+  &:active {
+    background-color: lime; 
+	}	
+}
+
+.returnLink {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  font-family: "Josefin Slab";
+  font-size: 16px;
+  font-weight: bold;
+  fontstyle: "italic";
+  color: blue;
+}
+
+.roundedButton {
+  width: 8rem;
+  height: 3em;
+  margin: 0.0rem;
+  padding: 4px;
+  color: white;
+  font-weight: bold;
+  font-family: 'Quicksand';
+  font-size: 16px;
+  background-color: dodgerblue;
+  border: 0px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  &:hover {
+        background-color: white;
+        color: green;
+        border: 1px solid green; 
+  }
+	&:disabled { 
+	  background-color: #90ff1e;
+	  color: white;
+	  border: 0px solid black; 
+	}
+}																		
+
+.span1 {
+	max-width: 400px;
+}
+
+.textEntryBox {
+	display: flex;
+	height: 80px;
+	width: 90vw;
+	max-width: 300px;
+	margin-bottom: 10px;
+}
+
+.textSection {
+	display: flex;
+	flex-direction: column;
+	max-width: 95vw; 
+  margin-bottom: 5px;
+}
+
+.title {
+  padding-left: 10px;
+  font-size: 32px;
+}
+
+.toolsDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 10px;
+}
+
+.undoRedoClearButton{
+  height: 32px;
+  padding: 8px;
+  color: white;
+  font-family: 'Josefin Slab';
+  font-weight: bold;
+  font-size: 1.0rem;
+  background-color: dodgerblue;
+  border: 0px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  &:hover {
+      background-color: palegreen;
+      color: navy;
+      border: 1px solid green; 
+  }
+  &:active {
+    background-color: lime; 
+	}	
+}
+
+.undoRedoClearRow {
+  align-self: flex-start;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 600;
+  max-width: 600px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.whiteboardDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 10px;
+  touch-action: none;
+	background-color: aliceblue;
+}
+

@@ -1,0 +1,45 @@
+
+
+meetings> db.person.findOne({username: 'bill'})
+{
+  _id: ObjectId("64fe22421211996790df5415"),
+  id: 2,
+  users_id: '',
+  username: 'bill',
+  email: 'b@b.com',
+  firstname: 'Bill',
+  lastname: 'Barnstable',
+  roomname: 'AGUXlatlCm8',
+  created_at: '2019-11-29 08:41:19.750 -0500',
+  updated_at: '2019-11-29 08:41:19.750 -0500',
+  password_digest: '$2a$10$TRJQjDCKBz4BKTE8kxKSn.ydecMncBCGfcagVrBY7SV2sWcOw4lL2',
+  mtg_types: 'Friday Sprint',
+  self_intro: 'bill.txt',
+  photo: 'bill.jpg'
+}
+
+meetings> db.session.findOne()
+{
+  _id: ObjectId("65404c5f71f69a5e11ea05bf"),
+  id: '20240301_1',
+  created_at: '2023-10-31T00:37:46.237Z',
+  mtg_types: 'New Project',
+  students_string: 'helen, juk',
+  first_names_string: 'Helen, Jakie',
+  weekday: 'Friday',
+  class_datetime: ISODate("2024-03-01T15:00:00.000Z"),
+  endtime: ISODate("2024-03-01T16:00:00.000Z"),
+  week_number: 1,
+  number_of_weeks: 1,
+  selected_weekdays: 'Friday',
+  mtg_requester: 'bill'
+}
+
+meetings> db.session_entry.findOne()
+{
+  _id: ObjectId("65404c5f71f69a5e11ea05c0"),
+  user: 'bill',
+  created_at: 'Mon Oct 30 2023 20:37:46 GMT-0400 (Eastern Daylight Time)',
+  entry: 'New Project meeting with helen, juk on Friday at 10:00 a.m. until 11:00 a.m. beginning on Friday, March 1, 2024 for 1 week(s)'
+}
+

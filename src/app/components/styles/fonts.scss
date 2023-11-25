@@ -1,0 +1,35 @@
+$josefinSlabEOT: './fonts/josefin-slab-v18-latin-regular.eot';
+$josefinSlabWoff: './fonts/josefin-slab-v18-latin-regular.woff';
+$josefinSlabWoff2: './fonts/josefin-slab-v18-latin-regular.woff2';
+$josefinSlabTTF: './fonts/josefin-slab-v18-latin-regular.ttf';
+$josefinSlabSVG: './fonts/josefin-slab-v18-latin-regular.svg';
+$quicksandEOT: './fonts/quicksand-v28-latin-regular.eot';
+$quicksandWoff: './fonts/quicksand-v28-latin-regular.woff';
+$quicksandWoff2: './fonts/quicksand-v28-latin-regular.woff2';
+$quicksandTTF: './fonts/quicksand-v28-latin-regular.ttf';
+$quicksandSVG: './fonts/quicksand-v28-latin-regular.svg';
+
+@font-face {
+        font-family: 'Josefin Slab';
+        src: local('Josefin Slab'), local('JosefinSlab'),
+        url($josefinSlabEOT) format('embedded-opentype'),  /* IE9 Compat Modes */
+				url($josefinSlabWoff) format('woff'),   /* Modern Browsers */
+				url($josefinSlabWoff2) format('woff2'),  /* Super Modern Browsers */
+				url($josefinSlabTTF) format('ttf'),     /* Safari, Android, iOS */
+				url($josefinSlabSVG) format('svg');     /* Legacy iOS */
+        font-weight: 400;
+        font-style: normal;
+}
+    
+@font-face {
+        font-family: 'Quicksand';
+        src: local('Quicksand'), 
+        url($quicksandEOT) format('embedded-opentype'),  /* IE9 Compat Modes */
+				url($quicksandWoff) format('woff'),   /* Modern Browsers */
+				url($quicksandWoff2) format('woff2'),  /* Super Modern Browsers */
+				url($quicksandTTF) format('ttf'),     /* Safari, Android, iOS */
+				url($quicksandSVG) format('svg');     /* Legacy iOS */
+        font-weight: 400;
+        font-style: normal;
+}
+
