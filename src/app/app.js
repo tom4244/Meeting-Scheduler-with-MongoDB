@@ -18,21 +18,9 @@ export const identifierAtom = atom("");
 export const passwordAtom = atom("");
 export const mtgTypesAtom = atom("");
 export const userAtom = atom({firstname:"", lastname:"", roomname:"", username:"", mtgTypes:""});
-export const signingUpAtom = atom(false);
 export const userPhotoAtom = atom(null);
 
 const App = (props) => {
-	// const [isAuthenticated, setIsAuthenticated] = useAtom(isAuthAtom);
-	// const [userName, setUserName] = useAtom(usernameAtom);
-/*  This token decoding is done in login.js and seems unnecessary here
-	if (localStorage.jwtToken) {
-		const token = localStorage.jwtToken;
-		const decodedToken = jwtDecode(token);
-		const { id, username, iat } = decodedToken;
-		console.log("jwtToken found. id: ", id, "  username: ", username, "  iat: ", iat);
-  }
-  */
-
   return (
 		<BrowserRouter>
           <Routes>

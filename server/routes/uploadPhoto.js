@@ -10,7 +10,7 @@ var fs = require('fs-extra');
 // configure storage
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, './src/app/img/userPhotos/' + req.body.user + '/');
+    cb(null, './src/app/img/userPhotos/');
   },
   filename: (req, file, cb) => {
     // The file name will be available as
@@ -38,7 +38,7 @@ router.post('/', upload.single('selectedPhotoFile'), async(req, res) => {
 
 router.get('/', (req, res) => {
 	const imgfilename = req.query.photo;
-	const imgfile = __dirname + '/../../src/app/img/userPhotos/' + req.query.user + '/' + imgfilename;
+	const imgfile = __dirname + '/../../src/app/img/userPhotos/' + imgfilename;
 	res.setHeader('Content-disposition', 'attachment; filename=' + imgfilename);
 	const mime = require('mime');
 	const mimetype = 'image/jpeg';

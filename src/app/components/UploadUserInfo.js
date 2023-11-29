@@ -3,7 +3,6 @@ import axios from "axios";
 import AnonymousPic from "../img/userPhotos/anonymous.jpg";
 import WelcomePagePic from "../img/meeting.jpg";
 import "./styles/userPage.scss";
-import { useNavigate } from "react-router-dom";
 import { useAtom } from "jotai";
 import { mtgTypesAtom } from "../app.js";
 import { userAtom } from "../app.js";
@@ -19,11 +18,9 @@ function UploadUserInfo(props) {
   const [changedPhoto, setChangedPhoto] = useState(false);
   const [changedMtgTypes, setChangedMtgTypes] = useState(false);
   const [beginningSelfIntroText, setBeginningSelfIntroText] = useState("");
-  const navigate = useNavigate();
   const [mtgTypes, setMtgTypes] = useAtom(mtgTypesAtom);
   const [user, setUser] = useAtom(userAtom);
   const [userPhoto, setUserPhoto] = useAtom(userPhotoAtom);
-  
   const tick = () => {
     setEndTime(new Date());
   };
@@ -40,7 +37,6 @@ function UploadUserInfo(props) {
       .catch((error) => console.log("Error in fetchSelfIntroText: ", error));
   };
  
-  // The changed photo will update when the page is next loaded
   useEffect(() => {
     fetchSelfIntroText();
   }); 
@@ -89,6 +85,7 @@ function UploadUserInfo(props) {
 	inputRef.current.click();
   };
 
+  // The changed photo will update when the page is next loaded
   const handleImgFileChange = event => {
     const selectedPhoto = event.target.files && event.target.files[0];
 	if (!selectedPhoto) {
@@ -105,12 +102,14 @@ function UploadUserInfo(props) {
       .catch((errors) => {
          console.log("Errors in handleImgFileChange: ", errors)
       });
-	setUserPhoto(require("../img/userPhotos/" + user.username + "/" + user.username + ".jpg"));
     setChangedPhoto(true);
   }
-
-	setUserPhoto(require("../img/userPhotos/" + user.username + "/" + user.username + ".jpg"));
-
+    try {
+	  setUserPhoto(require("../img/userPhotos/" + user.username + ".jpg"));
+	} 
+	catch(err) {
+	    setUserPhoto(require("../img/userPhotos/anonymous.jpg"));
+    };
 	return (
 	<>
     <div>

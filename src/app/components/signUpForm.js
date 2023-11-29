@@ -95,7 +95,6 @@ function SignUpForm() {
 	  setIsLoading(true);
 	  setIdentifier(username);
 	  const loginData = signUpData;
-
   	  userSignUpRequest(signUpData)
 	  .then(res => {
       	const dataString = '{"user":"' + username + '", "mtg_types":"' + mtgTypes + '"}';

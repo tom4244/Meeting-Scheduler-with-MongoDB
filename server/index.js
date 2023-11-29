@@ -35,7 +35,7 @@ app.use(helmet({
 		directives: {
       'default-src': ["'self'", "http://localhost/bundle.js"],
       'connect-src': ["'self'", 'ws://localhost:3000'],
-      'style-src': ["'self'", "'sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU='", "'sha256-ctEl8OuKHkM3T5T7zX550onT352rVeYibxCWZgGZKOc='", "'sha256-3RfH6bM0wLvmc1QyyIKZkyN2FZUgdz/cVAJJPkosAzY='", "'sha256-m8+NeE689JllGUWO7/kH+sDy2xA63UXCrnuUPm7zSKs='", "'sha256-aulcBZDbl4obMo2Ezd9fF5Vw1CA/1SwoxUgpcpYYXNU='", "'sha256-r9Shx6WzABwrcsnilVh0kZ9lpaf+0wspCqRBLHX+xgM='", "'sha256-uTbZnpWcu9heX2tkpBg5ShCSEDs7W//cIHATnBhyWgI='", "'sha256-Rev+CSFvzxtFnxbfxJLgG2KXrZgxbKuSBF9Kv2RcniE='"],
+      'style-src': ["'self'", "'sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU='", "'sha256-ctEl8OuKHkM3T5T7zX550onT352rVeYibxCWZgGZKOc='", "'sha256-3RfH6bM0wLvmc1QyyIKZkyN2FZUgdz/cVAJJPkosAzY='", "'sha256-m8+NeE689JllGUWO7/kH+sDy2xA63UXCrnuUPm7zSKs='", "'sha256-aulcBZDbl4obMo2Ezd9fF5Vw1CA/1SwoxUgpcpYYXNU='", "'sha256-r9Shx6WzABwrcsnilVh0kZ9lpaf+0wspCqRBLHX+xgM='", "'sha256-uTbZnpWcu9heX2tkpBg5ShCSEDs7W//cIHATnBhyWgI='", "'sha256-Rev+CSFvzxtFnxbfxJLgG2KXrZgxbKuSBF9Kv2RcniE='", "'sha256-YoMtmN8rKzEX8V/Nj6IMRuUeWrzFkcgV0S2U3z1ThTs='"],
       'script-src-attr': ["null"],
       'script-src': ["'self'"],
       'img-src': ["'self'", "http://localhost/fonts/", "http://localhost/img/userPhotos", "http://localhost/favicon.ico"],

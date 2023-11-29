@@ -109,7 +109,7 @@ router.post('/', async(req, res) => {
 	const { username, password, email, firstname, lastname, roomname, mtgTypes} = userdata;
 	const password_digest = bcrypt.hashSync(password, 10);
 	//Make a new user entry in the database
-    fs.copy(__dirname + '/../../src/app/img/userPhotos/anonymous.jpg', __dirname + '/../../src/app/img/userPhotos/' + username + '/' + username + '.jpg')
+    fs.copy(__dirname + '/../../src/app/img/userPhotos/anonymous.jpg', __dirname + '/../../src/app/img/userPhotos/' + username + '.jpg')
     fs.copy(__dirname + '/../selfIntros/anonymous.txt', __dirname + '/../selfIntros/' + username + '.txt')
 	.then(() => {
 	  console.log("anonymous photo and self-intro files copied")
