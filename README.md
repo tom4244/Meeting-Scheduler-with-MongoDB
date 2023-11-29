@@ -11,9 +11,9 @@ online whiteboard in your browser on desktop, tablet, or smartphone.
 
 This project uses React, Javascript, NodeJS, Express, Nginx, Socket.IO, Canvas, MongoDB, Webpack, Flexbox, SCSS, JSON Web Tokens (JWT), and Content Security Policy (CSP). A previous implementation uses PostgreSQL instead of MongoDB.
 
-![schedulerpage.png](https://github.com/tom4244/meeting_scheduler_with_MongoDB/blob/main/src/app/img/schedulerpage.png?raw=true)
+![schedulerpage.png](src/app/img/schedulerpage.png)
 
-![whiteboard.png](https://github.com/tom4244/meeting_scheduler/blob/main/src/app/img/whiteboard.png?raw=true)
+![whiteboard.png](src/app/img/whiteboard.png)
 
 # Installation
 * The site is configured to use an Express server for both http and socket.io with an Nginx server as a reverse proxy. The Express server is configured in the server/index.js file. An example nginx.conf file for Nginx server configuration with the needed "proxy pass" set up is included. 
